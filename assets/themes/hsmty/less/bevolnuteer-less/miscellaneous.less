@@ -1,0 +1,244 @@
+// features
+.feature-post {
+	border: 2px solid @border-color;
+	
+	.feature-head {
+		position: relative;
+		background: @bg-light;
+		padding: 20px 20px;
+	}
+
+	.feature-icon {
+		position: absolute;
+		top: -2px;
+		left: -2px;
+		width: 56px;
+		height: 56px;
+		line-height: 53px;
+		text-align: center;
+		background: @border-color;
+		z-index: 13;
+		i {
+			font-size: 18px;
+			line-height: 56px;
+			margin-left: 20px;
+		}
+	}
+
+	.triangle2 {
+		position: absolute;
+		top: 0;
+		left: 56px;
+		width: 0;
+		height: 0;
+		border: 28px solid transparent;
+    	border-left: 28px solid @border-color;
+    	border-top: 28px solid @border-color;
+		// border-bottom: solid 56px @border-color;
+		// border-right: solid 56px transparent;
+	}
+
+	.feature-title {
+		position: relative;
+		z-index: 12;
+		padding: 0;
+		margin: 0;
+		padding-left: 60px;
+		h4 {
+			margin: 0;
+			margin-left: 25px;
+			display: block;
+			font-size: 13px;
+		}
+	}
+
+	.feature-content {
+		padding: 20px;
+	}
+
+	@media screen and (max-width: @screen-sm-min){
+		margin-bottom: 30px;
+	}
+
+}
+
+
+
+
+
+// bottom part of page
+
+.bottom-part {
+	position: relative;
+	padding-bottom: 0;
+	background: @bg-light;
+
+	.right-banner {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-image: url('http://placehold.it/1920x790/18181a/000000');
+		@media screen and (max-width: @screen-sm-max){
+			display: none;
+		}
+	}
+
+	.donation-form {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		.steps {
+			padding: 0;
+			margin: 0;
+			margin-bottom: 30px;
+			list-style: none;
+			li {
+				position: relative;
+				display: inline-block;
+				padding: 0 30px;
+				font-size: 12px;
+				font-weight: 700;
+				color: @heading;
+				text-transform: uppercase;
+				&:extend(.heading-font);
+				cursor: pointer;
+
+				span {
+					margin-top: 10px;
+					text-align: center;
+					display: block;
+					width: 10px;
+					height: 10px;
+					border: 2px solid #a6a6a6;
+					.border-radius(10px);
+					margin-left: auto;
+					margin-right: auto;
+					&:after {
+						margin: 0 40px;
+						margin-top: 3px;
+						float: left;
+						display: inline-block;
+						content: '';
+						width: 30px;
+						height: 1px;
+						background: @border-color;
+					}
+				}
+				&.active {
+					span {
+						background: #a6a6a6;
+					}
+				}
+
+				&:first-child {
+					padding-left: 0;
+				}
+
+				&:last-child {
+					span {
+						&:after {
+							display: none;
+						}
+					}
+				}
+
+				@media screen and (max-width: @screen-sm-min){
+					display: block;
+					padding-left: 0;
+					span {
+						margin-left: 30px;
+						display: inline-block;
+						margin-top: 0;
+						&:after {
+							display: none;
+						}
+					}
+				}
+
+			}
+		}
+
+	}
+
+	.donation-section {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		padding-left: 30px;
+		text-align: center;
+
+		@media screen and (max-width: @screen-sm-max){
+			padding-top: 0;
+			padding-bottom: 0;
+			text-align: left;
+			padding-left: 0;
+		}
+		
+		.inner-content {
+			position: relative;
+			z-index: 11;
+			color: #fff;
+			padding-top: 60px;
+
+			h2 {
+				font-size: 20px;
+				margin-bottom: 30px;
+				color: #fff;
+				span {
+					color: @accent-color;
+				}
+			}
+
+			@media screen and (max-width: @screen-sm-max){
+				padding-top: 0;
+				padding-bottom: 60px;
+			}
+
+		}
+	}
+}
+
+.inner-content {
+	.cause-holder {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		span.raised,
+		span.goal {
+			color: #fff !important;
+		}
+		.progress {
+			background: rgba(255, 255, 255, 0.1);
+			height: 8px;
+			margin-top: 30px;
+			margin-bottom: 10px !important;
+		}
+	}
+	@media screen and (max-width: @screen-sm-max){
+		padding-left: 15px;
+		padding-right: 15px;
+		color: @text-color !important;
+
+		h2 {
+			color: @heading !important;
+		}
+
+		.cause-holder {
+			margin-left: 0;
+			span.raised,
+			span.goal {
+				color: @text-color-two !important;
+			}
+			.progress {
+				background: rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+}
+
+
+
+

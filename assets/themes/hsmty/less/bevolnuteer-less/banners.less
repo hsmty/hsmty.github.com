@@ -1,0 +1,64 @@
+.bannercontainer {
+    width:100%;
+    position:relative;
+    padding:0;
+    overflow: hidden;
+    margin-bottom: 60px;
+    @media screen and (max-width: @screen-sm-min){
+        margin-bottom: 60px;
+    }
+}
+ 
+.banner {
+    width:100%;
+    position:relative;
+}
+
+
+
+.tp-caption {
+
+    h2 {
+        font-size: 36px;
+        color: #fff;
+    }
+
+    p {
+        font-size: 13px;
+        color: #fff;
+    }
+
+    .line-seperator {
+        width: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    a.btn {
+        .drop-shadow(none);
+        &:extend(.heading-font);
+        font-size: 12px !important;
+        font-weight: 700;
+        padding: 12px 15px;
+        letter-spacing: 0.5px;
+
+        &.btn-default {
+            color: #fff;
+            &:hover,
+            &:focus,
+            &:active {
+                color: #fff;
+            }
+        }
+
+        &.btn-white {
+            color: @heading;
+            &:hover,
+            &:focus,
+            &:active {
+                color: @heading;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,180 @@
+// about page
+
+.services {
+	
+	.service-post {
+		margin-top: 30px;
+		cursor: default;
+		
+		.service-icon {
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			border: 2px solid @border-color;
+			float: left;
+			.transition(all 300ms ease-in-out);
+			i {
+				font-size: 20px;
+			}
+		}
+
+		.service-content {
+			overflow: hidden;
+			padding-left: 15px;
+
+			h5 {
+				font-size: 13px;
+				margin: 0;
+			}
+
+			.line-seperator {
+				margin: 12px 0 7px 0;
+				background: @border-color;
+			}
+
+		}
+
+		&:hover {
+			.service-icon {
+				background: @accent-color;
+				border-color: @accent-color;
+				color: #fff;
+			}
+		}
+
+	}
+
+}
+
+
+
+
+// volunteers
+
+.volunteer-post {
+	margin-bottom: 30px;
+
+	.v-thumb {
+		position: relative;
+		overflow: hidden;
+		img {
+			width: 100%;
+			display: block;
+			.opacity(1);
+			.transition(transform 1s);
+		}
+		.hover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(24, 24, 26, 0.8);
+			visibility: hidden;
+			.opacity(0);
+			.transition(all 200ms ease-in-out);
+
+			.social-media {
+				.vertical-align;
+				text-align: center;
+				visibility: hidden;
+				.opacity(0);
+				.transition(all 300ms linear);
+				a {
+					color: #fff;
+					font-size: 12px;
+					display: inline-block;
+					text-align: center;
+					margin: 3px;
+					i {
+						width: 30px;
+						height: 30px;
+						line-height: 30px;
+						&.fa-facebook {
+							background: #3b5998;
+						}
+						&.fa-twitter {
+							background: #55acee;
+						}
+						&.fa-google-plus {
+							background: #dd4b39;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.v-content {
+		margin-top: 15px;
+		h4 {
+			margin: 0 0 5px 0;
+			font-size: 13px;
+		}
+		span.role {
+			color: @text-color-two;
+		}
+		.line-seperator {
+			background: @border-color;
+			margin: 10px 0 12px 0;
+		}
+	}
+
+	&:hover {
+		.v-thumb {
+			img {
+				.scale(1.15);
+			}
+			.hover {
+				visibility: visible;
+				.opacity(1);
+				.social-media {
+					visibility: visible;
+					.opacity(1);
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+// offers 
+.offers {
+
+	.offer-post {
+		margin-bottom: 30px;
+
+		.o-thumb {
+			overflow: hidden;
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+
+		.o-content {
+			
+			h4 {
+				margin: 10px 0 0 0;
+				font-size: 14px;
+				a {
+					color: @heading;
+					&:hover {
+						color: @accent-color;
+					}
+				}
+			}
+
+			.line-seperator {
+				background: @border-color;
+			}
+
+		}
+
+	}
+
+}

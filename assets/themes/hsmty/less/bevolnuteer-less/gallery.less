@@ -1,0 +1,141 @@
+#Grid {
+	margin-top: 20px;
+	.mix {
+		margin-bottom: 30px;
+		display: none;
+  		.opacity(0);
+	}
+}
+
+.gallery-controls {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+	z-index: 99;
+	margin-bottom: 20px;
+
+	.toggle-filters {
+		font-size: 11px;
+		text-transform: uppercase;
+		font-weight: 700;
+		padding: 14px 15px;
+		border: 2px solid @border-color;
+		color: @heading;
+		position: relative;
+		i {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 54px;
+			height: 54px;
+			margin-left: 10px;
+			line-height: 56px;
+			text-align: center;
+			border-left: 2px solid @border-color;
+		}
+	}
+
+	li {
+		display: block;
+		position: relative;
+
+		a {
+			display: block;
+		}
+
+		ul {
+			display: none;
+			position: absolute;
+			width: 100%;
+			top: 100%;
+			left: 0;
+			padding: 0;
+			margin: 0;
+			border: 2px solid @border-color;
+			border-top: 0;
+
+			li {
+				background: #fff;
+				border-bottom: 2px solid @border-color;
+				cursor: pointer;
+				padding: 14px 15px;
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+
+	}
+
+}
+
+
+.gallery-post {
+	background: rgb(24, 24, 26);
+	.g-thumb {
+		position: relative;
+		overflow: hidden;
+		img {
+			width: 100%;
+			display: block;
+			.opacity(.7);
+			.transform(translate3d(0,0,0));
+			.transition(transform 1s);
+		}
+		.overlay {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			
+			.inner {
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				left: 0;
+			}
+
+			h4  {
+				margin: 0 0 0 20px;
+				font-size: 14px;
+				color: #fff;
+				// .opacity(0);
+				.transform(translate3d(0,0,0));
+				.transition(all 0.4s);
+			}
+			span {
+				margin-left: 25px;
+				display: block;
+				color: rgba(255, 255, 255, 0.8);
+				.opacity(0);
+				.transform(translate3d(0,360px,0));
+				.transition(all 0.4s);
+				i {
+					display: inline-block;
+					margin-right: 6px;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		.g-thumb {
+			img {
+				.scale(1.15);
+				.opacity(.2);
+			}
+			.overlay {
+				span {
+					.transform(translate3d(0,-20px,0));
+					.opacity(1);
+				}
+				h4 {
+					.transform(translate3d(0,-28px,0));
+				}
+			}
+		}
+	}
+
+}

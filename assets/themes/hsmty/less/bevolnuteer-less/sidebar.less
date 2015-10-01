@@ -1,0 +1,113 @@
+.sidebar {
+	padding-left: 40px;
+	
+	.widget {
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 30px;
+		display: block;
+
+		h4.widget-title {
+			font-size: 11px;
+			letter-spacing: 1px;
+			padding: 15px 20px;
+			margin-bottom: 20px;
+			display: block;
+			text-align: center;
+			background: darken(@bg-light, 2%);
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+	}
+
+	ul.sidebar-list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		li {
+			display: block;
+			border-bottom: 1px dashed @border-color;
+			&:before {
+				margin-right: 10px;
+				display: inline-block;
+				content: '';
+				width: 6px;
+				height: 6px;
+				border: 1px solid @border-color-focus;
+				.border-radius(6px);
+			}
+			a {
+				color: @text-color;
+				display: inline-block;
+				padding: 7px 0;
+				&:hover {
+					color: @accent-color;
+				}
+			}
+		}
+	}
+
+	.small-thumb {
+		a {
+			width: 70px;
+			height: 70px;
+			float: left;
+			display: block;
+			overflow: hidden;
+			padding: 0;
+			margin: 0 10px 10px 0;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.popular-posts {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		.blog-post {
+			display: block;
+			margin-bottom: 12px;
+			.post-thumb {
+				float: left;
+				width: 60px;
+				height: 60px;
+				img {
+					width: 100%;
+					display: block;
+				}
+			}
+			.blog-content {
+				overflow: hidden;
+				padding-left: 15px;
+				h5 {
+					margin-bottom: 0;
+					font-size: 12px;
+					a {
+						color: @heading;
+						&:hover {
+							color: @accent-color;
+						}
+					}
+				}
+				span.meta {
+					color: @text-color-two;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+
+	@media screen and (max-width: @screen-sm-max){
+		margin-top: 40px;
+		padding-left: 0;
+	}
+
+}

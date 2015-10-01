@@ -1,0 +1,196 @@
+// top header
+.top-header {
+	background: @bg-light;
+}
+
+.left-header {
+	@media screen and (max-width: @screen-sm-min){
+		display: none;
+	}
+}
+
+ul.header-list {
+	padding: 0;
+	margin: 0;
+	li {
+		float: left;
+		padding: 10px 15px;
+		display: block;
+		font-size: 12px;
+		border-left: 1px solid rgba(0, 0, 0, 0.1);
+		color: @text-color-two;
+		i {
+			margin-right: 7px;
+		}
+		&:last-child {
+			border-right: 1px solid rgba(0, 0, 0, 0.1);
+		}
+	}
+	a {
+		color: @text-color-two;
+	}
+}
+
+.header-social {
+	text-align: right;
+	a {
+		display: inline-block;
+		padding: 14px 4px;
+		font-size: 12px;
+		color: @text-color;
+		&:hover {
+			// color: @accent-color;
+		}
+	}
+	@media screen and (max-width: @screen-sm-min){
+		text-align: center;
+	}
+}
+
+
+
+// main header
+.main-header {
+	padding: 40px 0;
+
+	.donate-button {
+		float: right;
+		margin-left: 20px;
+		.btn {
+			padding: 15px 20px;
+		}
+	}
+
+	.search-form {
+		float: right;
+		input {
+			width: 270px;
+		}
+	}
+			.logo {
+					img {
+						width:250px;
+					}
+			}
+	@media screen and (max-width: @screen-sm-max){
+		.donate-button {
+			float: right;
+			margin-left: 0;
+		}
+		.search-form {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: @screen-sm-min){
+		.donate-button {
+			float: none;
+			margin-top: 30px;
+			width: 100%;
+			text-align: center;
+		}
+		.logo {
+			width: 100%;
+			text-align: center;
+				img {
+					width:250px;
+				}
+		}
+	}
+
+}
+
+
+@-webkit-keyframes navigation-sticky {
+	0% {
+		margin-top: -70px;
+	}
+	100% {
+		margin-top: 0;
+	}
+}
+@keyframes navigation-sticky {
+	0% {
+		margin-top: -70px;
+	}
+	100% {
+		margin-top: 0;
+	}
+}
+
+
+// navigation
+.main-navigation {
+	background: @accent-color;
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		li {
+
+			position: relative;
+			float: left;
+			display: inline-block;
+			border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+			&:last-child {
+				border-right: 1px solid rgba(0, 0, 0, 0.1);
+			}
+
+			&.active {
+				// background: rgba(0, 0, 0, 0.05);
+			}
+
+			ul {
+				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 200px;
+				background: @bg-light;
+				z-index: 9999;
+
+				li {
+					position: relative;
+					width: 100%;
+					display: block;
+					border-left: none;
+					border-bottom: 1px solid darken(@bg-light, 10%);
+
+					&:last-child {
+						border-right: none;
+						border-bottom: none;
+					}
+
+					ul {
+						position: absolute;
+						top: 0;
+						left: 100%;
+					}
+
+				}
+
+				a {
+					color: @heading;
+					font-size: 10px;
+					padding: 13px 22px;
+				}
+
+			}
+
+		}
+
+	}
+
+	a {
+		&:extend(.heading-font);
+		letter-spacing: 0.5px;
+		padding: 15px 22px;
+		display: block;
+		font-size: 12px;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+
+}
