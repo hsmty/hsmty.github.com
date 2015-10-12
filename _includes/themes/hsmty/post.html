@@ -1,49 +1,223 @@
-<div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
-</div>
+<section class="page-title">
+            <div class="bg-overlay"></div>
+            <div class="bg-image"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 page-title-inner">
+                        <h2>{{ page.title }} </h2>
+                        {% if page.tagline %}<p class="subtitle">{{page.tagline}}</p>{% endif %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-location clearfix">
+                            <div class="location">
+                                <h6><a href="index.html">Home</a></h6>
+                                <h6><a href="blog.html">Blog Entries</a></h6>
+                                <h6>{{ page.title }}</h6>
+                            </div>
+                            <div class="back-home hidden-xs hidden-sm"><a href="{{ HOME_PATH }}">&larr; Back to Home</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="row-fluid post-full">
-  <div class="span12">
-    <div class="date">
-      <span>{{ page.date | date_to_long_string }}</span>
-    </div>
-    <div class="content">
-      {{ content }}
-    </div>
+    <section>
+      <div class="container">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="main-content blog blog-single">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="blog-post">
+                              <div class="blog-image">
+                                <img src="http://placehold.it/1000x450/" alt="">
+                              </div>
+                              <div class="blog-content">
+                                <div class="blog-meta">
+                                  <span><a href="#"><i class="fa fa-pencil"></i>John Doe</a></span>
+                                  <span><a href="#"><i class="fa fa-calendar-o"></i>{{ page.date | date_to_long_string }}</a></span>
+                                  <span><a href="#"><i class="fa fa-folder-open"></i>Community, Events</a></span>
+                                  <span><a href="#"><i class="fa fa-comments"></i>3 Comments</a></span>
+                                </div>
+                                <h4>{{ page.title }}</h4>
+                                <span class="line-seperator"></span>
+                                {{ content }}
+                              </div>
+                              <div class="blog-footer clearfix">
+                                <div class="blog-tags">
+                                  <h6>Tags</h6>
+                                  <a href="#">design</a><a href="#">charity</a><a href="#">human</a>
+                                </div>
+                                <div class="blog-share">
+                                  <h6>Share it on:</h6>
+                                  <a href="#"><i class="fa fa-facebook"></i></a>
+                                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                                  <a href="#"><i class="fa fa-twitter"></i></a>
+                                  <a href="#"><i class="fa fa-tumblr"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <h3 class="comment-title">Comments (3)</h3>
+                            <div class="comment">
+                              <div class="comment-thumb">
+                                <a href="#"><img src="http://placehold.it/400x400/" alt=""></a>
+                              </div>
+                              <div class="comment-content">
+                                <div class="comment-header clearfix">
+                                  <div class="comment-author">
+                                    <h5><a href="#">Frederick Kepler</a></h5>
+                                    <span class="comment-date">26 July, 2015</span>
+                                  </div>
+                                  <a href="#" class="comment-reply">Reply</a>
+                                </div>
+                                <div class="comment-body">
+                                  <p>Authentic post-ironic tattooed VHS, Wes Anderson slow-carb Kickstarter wolf keffiyeh. Hashtag stumptown fap asymmetrical, vegan cray meggings.</p>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <div class="comment-thumb">
+                                  <a href="#"><img src="http://placehold.it/400x400/" alt=""></a>
+                                </div>
+                                <div class="comment-content">
+                                  <div class="comment-header clearfix">
+                                    <div class="comment-author">
+                                      <h5><a href="#">Vicky Dawson</a></h5>
+                                      <span class="comment-date">26 July, 2015</span>
+                                    </div>
+                                    <a href="#" class="comment-reply">Reply</a>
+                                  </div>
+                                  <div class="comment-body">
+                                    <p>Authentic post-ironic tattooed VHS, Wes Anderson slow-carb Kickstarter wolf keffiyeh. Hashtag stumptown fap asymmetrical, vegan cray meggings.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="comment">
+                              <div class="comment-thumb">
+                                <a href="#"><img src="http://placehold.it/400x400/" alt=""></a>
+                              </div>
+                              <div class="comment-content">
+                                <div class="comment-header clearfix">
+                                  <div class="comment-author">
+                                    <h5><a href="#">Joseph Haigh</a></h5>
+                                    <span class="comment-date">26 July, 2015</span>
+                                  </div>
+                                  <a href="#" class="comment-reply">Reply</a>
+                                </div>
+                                <div class="comment-body">
+                                  <p>Authentic post-ironic tattooed VHS, Wes Anderson slow-carb Kickstarter wolf keffiyeh. Hashtag stumptown fap asymmetrical, vegan cray meggings.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <h3 class="comment-title">Leave e reply</h3>
+                            <div class="row">
+                              <form class="comment-form">
+                                <div class="col-sm-4">
+                                  <input type="text" id="name" placeholder="Your Name">
+                                  <input type="email" id="email" placeholder="Email Address">
+                                  <input type="url" id="url" placeholder="Yur site (Optional)">
+                                </div>
+                                <div class="col-sm-8">
+                                  <textarea name="message" id="message" rows="7" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-sm-12">
+                                  <button class="btn btn-accent">Submit</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                    <div class="col-md-4">
+                      <aside class="sidebar">
+                        <div class="widget">
+                          <h4 class="widget-title">Popular Posts</h4>
+                          <ul class="popular-posts">
+                            <li class="blog-post clearfix">
+                              <div class="post-thumb">
+                                <a href="#"><img src="http://placehold.it/300x300" alt=""></a>
+                              </div>
+                              <div class="blog-content">
+                                <h5><a href="#">Help Girls To Get Education</a></h5>
+                                <span class="meta">November, 14, 2015</span>
+                              </div>
+                            </li>
+                            <li class="blog-post clearfix">
+                              <div class="post-thumb">
+                                <a href="#"><img src="http://placehold.it/300x300" alt=""></a>
+                              </div>
+                              <div class="blog-content">
+                                <h5><a href="#">Teenager needs help</a></h5>
+                                <span class="meta">November, 14, 2015</span>
+                              </div>
+                            </li>
+                            <li class="blog-post clearfix">
+                              <div class="post-thumb">
+                                <a href="#"><img src="http://placehold.it/300x300" alt=""></a>
+                              </div>
+                              <div class="blog-content">
+                                <h5><a href="#">Help to abuse substance</a></h5>
+                                <span class="meta">November, 14, 2015</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="widget">
+                          <h4 class="widget-title">Categories</h4>
+                          <ul class="sidebar-list">
+                            <li><a href="#">Donation</a></li>
+                            <li><a href="#">Fund Raising</a></li>
+                            <li><a href="#">Volunteer</a></li>
+                            <li><a href="#">Nonprofit</a></li>
+                          </ul>
+                        </div>
+                        <div class="widget">
+                          <h4 class="widget-title">Gallery Widget</h4>
+                          <div class="small-thumb gallery">
+                                <a href="http://placehold.it/800x520/" class="fresco" data-fresco-group="gallery-small">
+                                    <img src="http://placehold.it/300x300/" alt="">
+                                </a>
+                                <a href="http://placehold.it/800x520/" class="fresco" data-fresco-group="gallery-small">
+                                    <img src="http://placehold.it/300x300/" alt="">
+                                </a>
+                                <a href="http://placehold.it/800x520/" class="fresco" data-fresco-group="gallery-small">
+                                    <img src="http://placehold.it/300x300/" alt="">
+                                </a>
+                                <a href="http://placehold.it/800x520/" class="fresco" data-fresco-group="gallery-small">
+                                    <img src="http://placehold.it/300x300/" alt="">
+                                </a>
+                                <a href="http://placehold.it/800x520/" class="fresco" data-fresco-group="gallery-small">
+                                    <img src="http://placehold.it/300x300/" alt="">
+                                </a>
+                                <a href="http://placehold.it/800x520/" class="fresco" data-fresco-group="gallery-small">
+                                    <img src="http://placehold.it/300x300/" alt="">
+                                </a>
+                                <a href="http://placehold.it/800x520/" class="fresco" data-fresco-group="gallery-small">
+                                    <img src="http://placehold.it/300x300/" alt="">
+                                </a>
+                                <a href="http://placehold.it/800x520/" class="fresco" data-fresco-group="gallery-small">
+                                    <img src="http://placehold.it/300x300/" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="widget">
+                          <h4 class="widget-title">A Text widget</h4>
+                          <p>Chillwave YOLO photo booth readymade heirloom, art party beard shby chic scenester fap Echo Park gentrif farm-to-table dreamcatcher.</p>
+                        </div>
+                      </aside>
+                    </div>
+                </div>
 
-  {% unless page.categories == empty %}
-    <ul class="tag_box inline">
-      <li><i class="icon-folder-open"></i></li>
-      {% assign categories_list = page.categories %}
-      {% include JB/categories_list %}
-    </ul>
-  {% endunless %}  
-
-  {% unless page.tags == empty %}
-    <ul class="tag_box inline">
-      <li><i class="icon-tags"></i></li>
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
-    </ul>
-  {% endunless %}  
-
-    <hr>
-    <div class="pagination">
-      <ul>
-      {% if page.previous %}
-        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
-      {% else %}
-        <li class="prev disabled"><a>&larr; Previous</a></li>
-      {% endif %}
-        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
-      {% if page.next %}
-        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-      {% else %}
-        <li class="next disabled"><a>Next &rarr;</a>
-      {% endif %}
-      </ul>
-    </div>
-    <hr>
-    {% include JB/comments %}
-  </div>
-</div>
+      </div>
+    </section>
